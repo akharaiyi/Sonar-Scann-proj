@@ -15,7 +15,7 @@ node("CTG-LINUX-NODES"){
        echo "building the java project"
         sh """
             ls -ltra
-           /home/akhigbe/Downloads/sonar-scanner-4.5.0.2216-linux/bin/sonar-scanner
+            sonar-scanner
            echo "enjoying my first build with shared library in github"
          """.trim()
     }
@@ -23,13 +23,17 @@ node("CTG-LINUX-NODES"){
 
     stage("upload to nexus"){
     echo "upload artifact to nexus repo"
+/*
     nexusPublisher nexusInstanceId: 'nexus_server_ctg', nexusRepositoryId: 'maven-releases', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: '']], mavenCoordinate: [artifactId: 'Helloword', groupId: 'org.ctg', packaging: 'maven-archetype', version: '1.0-SNAPSHOT']]], tagName: 'devop-2020-feb-7'
+ */
 
 }
 
 
 
 }
+// /home/akhigbe/Downloads/sonar-scanner-4.5.0.2216-linux/bin/sonar-scanner
+
 
 
 
