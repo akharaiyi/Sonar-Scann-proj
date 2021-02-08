@@ -23,8 +23,7 @@ node("CTG-LINUX-NODES"){
 
     stage("upload to nexus"){
     echo "upload artifact to nexus repo"
-nexusArtifactUploader credentialsId: 'nexus', groupId: 'com.fmr.devops', nexusUrl: '192.168.1.7:8081/repository/ps-fmr-base/', nexusVersion: 'nexus3', protocol: 'http', repository: 'ps-fmr-base', version: '1.0.2021-02'
-    }
+nexusPublisher nexusInstanceId: 'nexus_server_ctg', nexusRepositoryId: 'maven-snapshots', packages: [[$class: 'MavenPackage', mavenAssetList: [], mavenCoordinate: [artifactId: 'devop', groupId: 'com.devop', packaging: 'tar', version: '1.0.2021-7']]], tagName: 'devop-2020-feb-7'    }
 
 
 
