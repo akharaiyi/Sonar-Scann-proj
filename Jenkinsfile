@@ -21,6 +21,20 @@ node("CTG-LINUX-NODES"){
     }
 
 
+    stage("upload to nexus"){
+    echo "upload artifact to nexus repo"
+    nexusArtifactUploader credentialsId: 'nexus', \
+    groupId: 'devop-ctg', nexusUrl: '192.168.1.7:8081', \
+    nexusVersion: 'nexus3', protocol: 'http', \
+    repository: 'ps-fmr-base', \
+    version: '1.0.2021-02'
+
+    }
+
+
+
+
+
 
 }
 
