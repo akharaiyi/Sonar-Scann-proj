@@ -23,9 +23,9 @@ node("CTG-LINUX-NODES"){
 
     stage("upload to nexus"){
     echo "upload artifact to nexus repo"
-nexusPublisher nexusInstanceId: 'nexus_server_ctg', nexusRepositoryId: 'maven-releases', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: '']], mavenCoordinate: [artifactId: 'Helloword', groupId: 'org.ctg', packaging: 'maven-archetype', version: '1.0-SNAPSHOT']]], tagName: 'devop-2020-feb-7'
+    nexusPublisher nexusInstanceId: 'nexus_server_ctg', nexusRepositoryId: 'maven-releases', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: '']], mavenCoordinate: [artifactId: 'Helloword', groupId: 'org.ctg', packaging: 'maven-archetype', version: '1.0-SNAPSHOT']]], tagName: 'devop-2020-feb-7'
 
-
+}
 
 
 
