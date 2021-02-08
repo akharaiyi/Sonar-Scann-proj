@@ -1,6 +1,6 @@
 
 def SONAR_TOKEN = "c892c1b0655e1feacd1ccce04929f2d4f8cdba82"
-node("CTG-LINUX-NODES"){
+node("Test-machine-linux"){
 @Library('Personal-Jenkins-shared-library') _
     stage('git checkout'){
         scmcheckout{
@@ -23,10 +23,7 @@ node("CTG-LINUX-NODES"){
 
 
     stage("upload to nexus"){
-    echo "upload artifact to nexus repo"
-/*
-    nexusPublisher nexusInstanceId: 'nexus_server_ctg', nexusRepositoryId: 'maven-releases', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: '']], mavenCoordinate: [artifactId: 'Helloword', groupId: 'org.ctg', packaging: 'maven-archetype', version: '1.0-SNAPSHOT']]], tagName: 'devop-2020-feb-7'
- */
+
 
 }
 
