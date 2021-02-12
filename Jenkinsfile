@@ -27,6 +27,10 @@ node("Test-machine-linux"){
 
 }
 
+    stage("SONAR_GATE"){
+        
+    }
+
 
 
 }
