@@ -28,6 +28,7 @@ node("Test-machine-linux"){
 }
 
     stage("SONAR_GATE"){
+        // sonar analysis
         
     }
 
