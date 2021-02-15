@@ -1,5 +1,4 @@
 
-def SONAR_TOKEN = "c892c1b0655e1feacd1ccce04929f2d4f8cdba82"
 node("Test-machine-linux-master"){
 @Library('Personal-Jenkins-shared-library') _
     stage('git checkout'){
@@ -13,7 +12,7 @@ node("Test-machine-linux-master"){
        echo "building the java project"
         sh """
             ls -ltra
-           ${env.SONAR_SCANNER} -X -Dsonar.login=${SONAR_TOKEN}
+           ${env.SONAR_SCANNER} -X 
            echo "enjoying my first build with shared library in github"
          """.trim()
     }
