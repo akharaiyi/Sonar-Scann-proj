@@ -1,5 +1,5 @@
 
-node("Test-machine-linux-master"){
+node("Test-machine-linux"){
 @Library('Personal-Jenkins-shared-library') _
     stage('git checkout'){
         scmcheckout{
