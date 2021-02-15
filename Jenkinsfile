@@ -13,7 +13,7 @@ node("Test-machine-linux"){
        echo "building the java project"
         sh """
             ls -ltra
-            ${env.SONAR_SCANNER} -X -Dsonar.login=${SONAR_TOKEN}
+           /home/akhigbe/Downloads/sonar-scanner-4.5.0.2216-linux/bin/sonar-scanner -X -Dsonar.login=${SONAR_TOKEN}
            echo "enjoying my first build with shared library in github"
          """.trim()
     }
