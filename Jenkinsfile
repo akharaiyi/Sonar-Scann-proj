@@ -9,9 +9,6 @@ node("Test-machine-linux"){
         }
     }
 
-    stage('check the dir for all file and build')
-
-
     stage('build'){
        echo "building the java project"
         sh """
@@ -23,7 +20,7 @@ node("Test-machine-linux"){
 
 
     stage("upload to nexus"){
-
+     echo "hello world"
 
 }
 
